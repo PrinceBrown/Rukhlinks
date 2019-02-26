@@ -1,0 +1,213 @@
+<%- include includes/head.ejs %>
+    </head>
+    <%- include includes/navigation.ejs %>
+        </nav>
+
+        <!-- End .container -->
+        </header>
+        <!-- End #header -->
+
+        <section id="content" role="main">
+            <div class="breadcrumb-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="breadcrumb">
+                                <li><a href="index.html" title="Home">Home</a></li>
+                                <li class="active">Category Page</li>
+                            </ul>
+                        </div>
+                        <!-- End .col-md-12 -->
+                    </div>
+                    <!-- End .row -->
+                </div>
+                <!-- End .container -->
+            </div>
+            <!-- End .breadcrumb-container -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="category-banner">
+                            <img src="images/banners/women.jpg" alt="Women" class="img-responsive">
+                            <div class="banner-container">
+                                <div class="vcenter-container">
+                                    <div class="vcenter">
+                                        <div class="banner-content">
+                                            <h1><span>New Women</span>Collection</h1>
+                                            <a href="#" class="btn btn-custom-7 min-width-md">Buy it now</a>
+                                        </div>
+                                    </div>
+                                    <!-- End .vcenter -->
+                                </div>
+                                <!-- End .vcenter-container -->
+                            </div>
+                            <!-- End .banner-content -->
+                        </div>
+                        <!-- End #category-banner -->
+
+                        <div class="lg-margin"></div>
+                        <!-- space -->
+
+                        <div class="row">
+                            <div class="col-md-12 padding-right-lg">
+
+                                <div id="category-filter-bar" class="clearfix">
+                                    <div class="pull-left clearfix">
+
+                                        <div class="pull-left sort-filter">
+                                            <div class="normal-selectbox clearfix">
+                                                <select id="sort-filter" name="sort-filter" class="selectbox">
+                                            <option value="Default">Sort By: Default</option>
+                                            <option value="Price">Sort By: Price</option>
+                                            <option value="Size">Sort By: Size</option>
+                                            <option value="Rating">Sort By: Rating</option>
+                                            <option value="Color">Sort By: Color</option>
+                                        </select>
+                                            </div>
+                                            <!-- End .normal-selectbox-->
+                                        </div>
+                                        <!-- End .sort-filter -->
+
+                                        <div class="pull-left show-filter">
+                                            <div class="normal-selectbox clearfix">
+                                                <select id="show-filter" name="show-filter" class="selectbox">
+                                            <option value="15">Show: 15</option>
+                                            <option value="20">Show: 20</option>
+                                            <option value="25">Show: 25</option>
+                                            <option value="30">Show: 30</option>
+                                            <option value="40">Show: 40</option>
+                                        </select>
+                                            </div>
+                                            <!-- End .normal-selectbox-->
+                                        </div>
+                                        <!-- End .sort-filter -->
+
+                                    </div>
+                                    <!-- End .pull-left -->
+
+                                    <div class="sm-margin visible-xs clearfix"></div>
+                                    <!-- space -->
+
+                                    <div class="pull-right clearfix">
+                                        <a href="compare.html" class="btn btn-custom-8 btn-compare pull-right">Compare</a>
+                                        <div class="view-btn-group pull-right">
+                                            <a href="category.html" class="btn btn-view btn-view-grid active">Grid View</a>
+                                            <a href="category-list.html" class="btn btn-view btn-view-list">List View</a>
+                                        </div>
+                                        <!-- End .view-btn-group -->
+                                    </div>
+                                    <!-- End .pull-right -->
+                                </div>
+                                <!-- End #category-filter-bar -->
+                                <%if(products.length > 0){%>
+                                    <div class="category-grid">
+
+
+                                        <%for (let product of products){%>
+                                            <div class=".flex-row">
+                                                <div class="col-sm-4 md-margin2x">
+                                                    <div class="product">
+                                                        <div class="product-top">
+                                                            <figure class="product-image-container">
+                                                                <a href="product.html" title="White linen sheer dress">
+                                                                    <img src="images/products/product2.jpg" alt="Product image" class="product-image">
+                                                                    <img src="images/products/product2-hover.jpg" alt="Product image hover" class="product-image-hover">
+                                                                </a>
+                                                            </figure>
+                                                            <div class="product-action-container">
+                                                                <div class="product-action-wrapper action-responsive">
+                                                                    <a href="#" title="Add to Cart" class="product-add-btn">
+                                                                        <span class="add-btn-text">Add to Cart</span>
+                                                                        <span class="product-btn product-cart">Cart</span>
+                                                                    </a>
+                                                                    <a href="#" title="Search" class="product-btn product-search">Search</a>
+                                                                    <a href="#" title="Favorite" class="product-btn product-favorite">Favorite</a>
+                                                                    <a href="#" title="Compare" class="product-btn product-compare">Compare</a>
+                                                                </div>
+                                                                <!-- End .product-action-wrapper -->
+                                                            </div>
+                                                            <!-- End .product-action-container -->
+                                                        </div>
+                                                        <!-- End .product-top -->
+                                                        <h3 class="product-name">
+                                                            <a href="product.html" title="<%=product.productName%>">
+                                                                <%=product.productName%>
+                                                            </a>
+                                                        </h3>
+                                                        <div class="product-price-container">
+                                                            <span class="product-price">
+                                                <%=product.productPrice%></span>
+                                                        </div>
+                                                        <!-- End .product-price-container -->
+                                                    </div>
+                                                    <!-- End .product -->
+                                                </div>
+                                                <!-- Emd .col-sm-4 -->
+
+
+                                                <!-- Emd .col-sm-4 -->
+                                            </div>
+                                            <%}%>
+                                                <!-- End .row -->
+
+
+
+
+
+
+
+
+
+
+                                                <div class="pagination-container clear-margin clearfix">
+                                                    <span class="pagination-info">
+                                    Items 1 to 18 of 120 total
+                                </span>
+                                                    <!-- End.pagination-info -->
+                                                    <ul class="pagination pull-right">
+                                                        <li class="active"><span>1</span></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li><a class="next-page" href="#">Next</a></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- End pagination-container -->
+
+                                    </div>
+                                    <%} else{%>
+                                        <h1>No Products Found</h1>
+                                        <%}%>
+                                            <!-- End .category-grid -->
+
+                                            <div class="md-margin2x visible-sm visible-xs"></div>
+                                            <!-- space -->
+                            </div>
+                            <!-- End .col-md-9 -->
+
+
+
+
+
+
+
+                        </div>
+                        <!-- End .row -->
+                    </div>
+                    <!-- End .col-sm-12 -->
+                </div>
+                <!-- End .row -->
+            </div>
+            <!-- End .container -->
+
+            <div class="lg-margin3x hidden-xs"></div>
+            <!-- space -->
+            <div class="md-margin2x visible-xs"></div>
+            <!-- space -->
+
+        </section>
+        <!-- End #content -->
+        <!-- Footer -->
+        <%- include includes/end.ejs %>
